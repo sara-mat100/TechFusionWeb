@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFusion Agency</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            background-color: #121212;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            background: #3b006b; /* Vibrant purple */
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-logo {
+            width: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+            .nav-links a {
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 1rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                transition: color 0.3s ease;
+            }
+
+                .nav-links a:hover {
+                    color: #9f79ee; /* Light purple on hover */
+                }
+
+        /* Hero Section with Parallax */
+        .hero {
+            height: 100vh;
+            background: url('parallax1.jpg') no-repeat center center/cover;
+            background-attachment: fixed; /* Parallax effect */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+            z-index: -1;
+        }
+
+        .hero-content {
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin: 0 0 20px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: #ffffff;
+            background-color: #9f79ee;
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+            .cta-button:hover {
+                background-color: #ffffff;
+                color: #3b006b;
+                transform: scale(1.1);
+            }
+
+        /* Parallax Services Section */
+        #services {
+            background: url('parallax2.jpg') no-repeat center center/cover;
+            background-attachment: fixed; /* Parallax effect */
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+            #services h2 {
+                color: #9f79ee;
+                margin-bottom: 30px;
+            }
+
+        .service {
+            display: inline-block;
+            width: 30%;
+            margin: 15px;
+            background: rgba(30, 30, 30, 0.8); /* Semi-transparent background for services */
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+            .service:hover {
+                transform: translateY(-10px);
+                background-color: #3b006b;
+            }
+
+            .service h3 {
+                color: #ffffff;
+                margin-bottom: 10px;
+            }
+
+        /* About Section */
+        #about {
+            background: #121212;
+            padding: 50px 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+            #about h2 {
+                color: #9f79ee;
+                margin-bottom: 20px;
+            }
+
+            #about p {
+                font-size: 1.2rem;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+        /* Contact Section */
+        /* Contact Section */
+        #contact {
+            background: #1e1e1e;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+            #contact h2 {
+                color: #9f79ee;
+                margin-bottom: 20px;
+            }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 8px;
+                font-size: 1rem;
+                color: #ffffff;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                width: 100%;
+                padding: 10px;
+                font-size: 1rem;
+                color: #ffffff;
+                background: #292929;
+                border: 1px solid #9f79ee;
+                border-radius: 5px;
+                outline: none;
+                transition: border-color 0.3s ease;
+            }
+
+                .form-group input:focus,
+                .form-group textarea:focus {
+                    border-color: #3b006b;
+                }
+
+        .contact-form button {
+            margin-top: 10px;
+            display: inline-block;
+            width: 100%;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #9f79ee;
+            border: none;
+            border-radius: 30px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+            .contact-form button:hover {
+                background-color: #ffffff;
+                color: #3b006b;
+                transform: scale(1.05);
+            }
+
+        /* Footer */
+        footer {
+            background: #292929;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="techFusion-logo.jpg" alt="TechFusion Logo" class="nav-logo">
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to TechFusion</h1>
+            <p>Your trusted partner for innovation and technology solutions.</p>
+            <a href="#services" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Cloud Solutions</h3>
+            <p>Scalable and secure cloud infrastructure with AWS and Azure.</p>
+        </div>
+        <div class="service">
+            <h3>Web Development</h3>
+            <p>Custom websites tailored to your business needs.</p>
+        </div>
+        <div class="service">
+            <h3>DevOps Expertise</h3>
+            <p>Efficient CI/CD pipelines and automation strategies.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At TechFusion, we deliver cutting-edge solutions to help businesses thrive in the digital era. Our team of experts is dedicated to creating scalable, secure, and innovative systems tailored to your unique needs.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Let's work together to create something amazing.</p>
+        
+        <form action="https://formspree.io/f/xanypeer" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 TechFusion Agency. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
